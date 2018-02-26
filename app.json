@@ -1,0 +1,27 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/msg/msg",
+    "pages/designList/designList",
+    "pages/design/design",
+    "pages/login/login",
+    "pages/history/history",
+    "pages/process/process",
+    "pages/function/function",
+    "pages/evaluate/evaluate",
+    "pages/checkAccept/checkAccept",
+    "pages/consult/consult",
+    "pages/feedback/feedback",
+    "pages/people/people",
+    "pages/reportDetail/reportDetail",
+    "pages/billing/billing",
+    "pages/peopleInfo/peopleInfo",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

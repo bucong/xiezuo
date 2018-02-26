@@ -1,0 +1,19 @@
+<!--pages/msg/msg.wxml-->
+<view class='username'>{{username}}</view>
+<view>
+ <view class='receive'>
+  <view class='time'>{{time}}</view>
+  <view class='chat'>
+    <text>{{content}}</text>
+    <view>
+      <image src="{{ipimg}}{{item}}" wx:for="{{img}}" wx:key="key"></image>
+    </view>
+  </view>
+  <image class='exigent' src='../images/exigent{{exigent}}.png'></image>
+ </view>
+
+ <view class='send' style='display:{{problemSolve==null?"none":"block"}}'>
+  <view class='time'>{{replyTime}}</view>
+  <view class='chat'>[{{sourceType[sourceId]}}] {{problemSolve}}</view>
+ </view>
+</view> 

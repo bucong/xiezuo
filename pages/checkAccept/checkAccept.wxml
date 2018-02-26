@@ -1,0 +1,47 @@
+<!--pages/checkAccept/checkAccept.wxml-->
+<view class='no-list' style='display:{{list[0].length==0?"block":"none"}}'>
+  <image src='../images/noData.png'></image>
+  <view>暂无数据</view>
+</view>
+<view style='display:{{list[0].length==0?"none":"block"}}'>
+  <view class='page-box' wx:for="{{list[0]}}" wx:key="key">
+    <checkbox-group class='title' data-id='{{item.id}}' bindchange="allChange">
+      <label class="checkbox flex">
+        <view>{{item.name}}</view>
+        <checkbox value="{{item.name}}" checked="{{item.confirmCustomer}}"/>
+      </label>
+    </checkbox-group>
+    <checkbox-group data-id='{{item.id}}' bindchange="checkboxChange">
+      <label class="checkbox list flex" wx:for="{{list[item.id]}}" wx:key="key">
+        <view>{{item.name}}</view>
+        <checkbox value="{{item.name}}" checked="{{item.confirmCustomer}}" style='display:{{item.isConfirm?"none":"block"}}'/>
+        <text style='display:{{item.isConfirm?"block":"none"}}'>{{item.confirmTime}}</text>
+      </label>
+    </checkbox-group>
+  </view>
+  <form report-submit="true" bindsubmit='subCheck'>
+    <view class='btn-box flex' style='display:{{confirm?"none":"flex"}}'>
+      <button class='sub all' form-type='submit' data-type="all">全部确认</button>
+      <button class='sub' form-type='submit' data-type="part">部分确认</button>
+    </view> 
+  </form>
+  <view class='btn-box' style='display:{{!evaluate&&confirm?"block":"none"}}'>
+    <navigator url='../evaluate/evaluate?proId={{proId}}&name={{name}}' class='sub'  hover-class="none">项目评价</navigator>
+  </view>
+
+  <view class='send-email' bindtap='send_all_fuction_list'>
+    <image src='../images/email.png' class='icon-email'></image>
+    <text>发送到我的邮箱</text>
+    <image src='../images/angleRight.png' class='icon-right'></image>
+  </view>
+</view>
+<view class='meng' style='display:{{meng}}'>
+  <view class='meng-box'>
+    <view class='meng-tit'>备注</view>
+    <textarea placeholder='点击输入文字' bindinput='remarkContent'></textarea>
+    <view class='flex'>
+      <text class='cancel' bindtap='mengCancel'>取消</text>
+      <text class='meng-sub' bindtap='mengSub'>确认</text>
+    </view>
+  </view>
+</view>

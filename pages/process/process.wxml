@@ -1,0 +1,19 @@
+<!--pages/process/process.wxml-->
+<view class='head'>
+  <image src='../images/bg1.png' class="bg"></image>
+  <view>{{name}}</view>
+  <image class='proStatus' src='../images/status{{status}}.png'></image>
+</view>
+<view style='display:{{list.length==0?"none":"block"}}'>
+  <view class='list-box'>
+    <navigator url='../reportDetail/reportDetail?id={{item.id}}&name={{item.name}}&details={{item.details}}&remark={{item.remark}}' hover-class="none" class='list flex {{item.isRead==1?"finish":""}}' wx:for="{{list}}" wx:key="key">
+      <view class='time'>{{item.createTime}}</view>
+      <view class='name'>{{item.name}}</view>
+      <image src='../images/angleRight.png'></image>
+    </navigator>
+  </view>
+</view>
+<view class='no-list' style='display:{{list.length==0?"block":"none"}}'>
+  <image src='../images/noData.png'></image>
+  <view>暂无数据</view>
+</view>

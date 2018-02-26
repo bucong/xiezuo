@@ -1,0 +1,32 @@
+<!--pages/billing/billing.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='list'>
+    <input type='text' name="id" placeholder='请输入' style='display:none;' value='{{id}}' />
+    <view class='flex'>
+      <text>公司名称</text>
+      <input type='text' name="billName" placeholder='请输入' value='{{billName}}' />
+    </view>
+    <view class='flex'>
+      <text>税号</text>
+      <input type='number' name="billTax" placeholder='请输入' value='{{billTax}}' />
+    </view>
+    <view class='flex'>
+      <text>开户行</text>
+      <input type="text" name="billBankName" placeholder='请输入' value='{{billBankName}}' />
+    </view>
+    <view class='flex'>
+      <text>账号</text>
+      <input type="text" name="billBankNumber" placeholder='请输入' value='{{billBankNumber}}' />
+    </view>
+    <view class='flex address'>
+      <text>地址</text>
+      <textarea name="billAddress" placeholder='请输入' value='{{billAddress}}'/>
+    </view>
+    <view class='flex'>
+      <text>电话</text>
+      <input type="text" name="billMobile" placeholder='请输入' value='{{billMobile}}' />
+    </view>
+  </view>
+  <button form-type='submit'>保存</button>
+  <view class='info' style='display:{{username==""?"none":"block"}}'>{{username}} 于 {{updateTime}} 更新了开票资料</view>
+</form>

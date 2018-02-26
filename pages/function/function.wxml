@@ -1,0 +1,22 @@
+<!--pages/function/function.wxml-->
+<view class='no-list' style='display:{{list[0].length==0?"block":"none"}}'>
+  <image src='../images/noData.png'></image>
+  <view>暂无数据</view>
+</view>
+<view style='display:{{list[0].length==0?"none":"block"}}'>
+  <view class='list' wx:for="{{list[0]}}" wx:key="key">
+    <view class='flex title'>
+      <view>{{item.name}}</view>
+      <image src="../images/{{item.confirmCustomer}}.png" data-id='{{item.id}}' bindtap='pack'></image>
+    </view>
+    <view class='page' style='height: {{item.confirmCustomer}}'>
+      <view wx:for="{{list[item.id]}}" wx:key="key">{{item.name}}</view>
+    </view>
+  </view>
+  <view style='display:{{confirm?"none":"block"}}'><button class='sub' bindtap='functionSub'>功能确认</button></view>
+  <view class='send-email' bindtap='send_all_fuction_list'>
+    <image src='../images/email.png' class='icon-email'></image>
+    <text>发送到我的邮箱</text>
+    <image src='../images/angleRight.png' class='icon-right'></image>
+  </view>
+</view>

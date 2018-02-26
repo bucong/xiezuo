@@ -1,0 +1,109 @@
+/**index.wxss**/
+swiper{
+  height: 1040rpx;
+}
+.head{
+  text-align: center;
+  height: 280rpx;
+  color: #fff;
+  position: relative;
+  margin-bottom: 26rpx;
+}
+.head .bg{
+  width: 750rpx;
+  height: 280rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.head view{
+  font-size: 44rpx;
+  line-height: 60rpx;
+  padding: 46rpx 0;
+}
+.head .proStatus{
+  width: 40rpx;
+  height: 40rpx;
+}
+.nav-icon-box{
+  width: 602rpx;
+  margin: 0 auto;
+}
+.nav-icon{
+  display: inline-block;
+  width: 298rpx;
+  height: 234rpx;
+  text-align: center;
+  border-right: 2rpx solid #F5F5F5;
+  border-bottom: 2rpx solid #F5F5F5;
+  position: relative;
+}
+.nav-icon:nth-child(2n){
+  border-right: none;
+}
+.nav-icon:nth-child(5),.nav-icon:nth-child(6){
+  border-bottom: none;
+}
+.nav-icon image{
+  width: 160rpx;
+  height: 120rpx;
+  margin: 12rpx 0;
+}
+.nav-icon text{
+  display: block;
+  color: #495E77;
+  font-size: 28rpx;
+}
+.nav-icon .no-read{
+  position: absolute;
+  top: 24rpx;
+  right: 86rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background: #FF6161;
+  display: none;
+}
+.no-data{
+  height: 740rpx;
+  text-align: center;
+  padding-top: 300rpx;
+  display: none;
+}
+.no-data image{
+  width: 270rpx;
+  height: 228rpx;
+}
+.no-data view{
+  font-size: 28rpx;
+}
+.go-people{
+  position: relative;
+}
+.go-people .people{
+  width: 200rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border: 1rpx solid rgba(100,146,255,0.3);
+  color: #10AEFF;
+  font-size: 24rpx;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 26rpx;
+}
+.consult{
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+}
+.consult image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.info{
+  text-align: center;
+  font-size: 24rpx;
+  color: #C3C9D2;
+  margin: 26rpx 0;
+}

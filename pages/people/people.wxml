@@ -1,0 +1,30 @@
+<!--pages/people/people.wxml-->
+<view class='people-head' style='background-image:url(../images/people.png)'>
+  <image src='{{headImg}}'></image>
+  <text>{{userName}}</text>
+</view>
+<view class='flex nav'>
+  <navigator url='../peopleInfo/peopleInfo' hover-class="none">
+    <image src="../images/people1.png"></image>
+    <text>个人信息</text>
+  </navigator>
+  <view class='segmenting'></view>
+  <navigator url="../billing/billing" hover-class="none" style='display:{{list.length==0?"none":"block"}}'>
+    <image src="../images/people2.png"></image>
+    <text>开票资料</text>
+  </navigator>
+  <view style='display:{{list.length==0?"block":"none"}}'>
+    <image src="../images/people3.png"></image>
+    <text style='color:#ccc'>开票资料</text>
+  </view>
+</view>
+<view class='list'>
+  <view class='flex nav-pro' bindtap='goProject' data-id="{{item.id}}" data-i="{{index}}" wx:for="{{list}}" wx:key="key" wx:for-index='index'>
+    <text>{{item.name}}</text>
+    <image src='../images/peoStatus{{item.statusVal}}.png'></image>
+  </view>
+</view>
+<view class='no-data' style='display:{{list.length==0?"block":"none"}}'>
+  <image src='../images/noData.png'></image>
+  <view>请联系管理员加入项目</view>
+</view>

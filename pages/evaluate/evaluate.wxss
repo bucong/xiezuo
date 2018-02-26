@@ -1,0 +1,86 @@
+/* pages/evaluate/evaluate.wxss */
+page{
+  background: #f5f7f9;
+  padding: 0 30rpx;
+  width: 690rpx;
+}
+.name{
+  color: #808080;
+  padding: 40rpx 0;
+  font-size: 28rpx;
+}
+.name view{
+  width: 240rpx;
+  height: 2rpx;
+  background: #E6E6E6;
+}
+.star-box{
+  width: 510rpx;
+  height: 70rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.star-box image{
+  width: 510rpx;
+  height: 70rpx;
+}
+.star{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 510rpx;
+}
+.star view{
+  width: 70rpx;
+  height: 70rpx;
+}
+.star-content{
+  text-align: center;
+  color: #3370FF;
+  font-size: 24rpx;
+  margin: 40rpx 0 60rpx 0;
+}
+.tag-tit{
+  font-size: 24rpx;
+  color: #4d4d4d;
+  margin-bottom: 16rpx;
+}
+.tag label{
+  font-size: 26rpx;
+  display: inline-block;
+  line-height: 52rpx;
+  padding: 0 30rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  margin-right: 20rpx;
+  border: 2rpx solid #e6e6e6;
+  color: #B3B3B3;
+  margin-bottom: 16rpx;
+}
+.tag .active{
+  border: 2rpx solid #3370FF;
+  color: #3370FF;
+}
+.tag checkbox{
+  display: none;
+}
+textarea{
+  width: 646rpx;
+  height: 220rpx;
+  background: #fff;
+  border: 2rpx solid #E6E6E6;
+  padding: 20rpx;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}
+.sub{
+  width: 300rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  background: #3370ff;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  margin-top: 210rpx;
+  box-shadow: 0 16rpx 20rpx rgba(100,146,255,0.3);
+}

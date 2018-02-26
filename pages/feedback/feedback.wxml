@@ -1,0 +1,19 @@
+<!--pages/feedback/feedback.wxml-->
+<view class='border-top'></view>
+<navigator url='../msg/msg?id={{item.id}}' class='list' wx:for="{{list}}" wx:key="key" style='display:{{list.length==0?"none":"block"}}' hover-class="none">
+  <view class='flex title'>
+    <image class='exigent' src='../images/exigent{{item.problemLevel}}.png' style='display:{{item.problemLevel==0?"none":"block"}}'></image>
+    <view>{{item.problemTitle}}</view>
+    <text>{{item.createTime}}</text>
+  </view>
+  <view class='flex content'>
+    <view class='no-read' style='display:{{item.status==1?"block":"none"}}'></view>
+    <view class='question' style='width:{{item.status==2?"500rpx":"540rpx"}}'>{{item.problemContent}}</view>
+    <text>{{item.problemSource}}</text>
+  </view>
+  <view class='status'><text>{{item.problemSolve==null?"":"["+(item.problemCate==1?"bug":(item.problemCate==2?"需求变更":"新增需求"))+"]"}}</text> {{item.problemSolve==null?"":item.problemSolve}}</view>
+</navigator>
+<view class='no-list' style='display:{{list.length==0?"block":"none"}}'>
+  <image src='../images/noData.png'></image>
+  <view>暂无数据</view>
+</view>

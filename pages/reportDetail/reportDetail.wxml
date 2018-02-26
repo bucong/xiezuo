@@ -1,0 +1,20 @@
+<!--pages/reportDetail/reportDetail.wxml-->
+<view style='display:{{title==""?"none":"block"}}'>
+  <view class='title'>{{title}}</view>
+  <view class='list' wx:for="{{list}}" wx:key="key">
+    <view>{{item}}</view>
+  </view>
+  <view class='remark'>
+    <view class='tit'>备注 REMARK</view>
+    <view class='content'>{{remark}}</view>
+  </view>
+  <view class='send-email' bindtap='send_report_to_my_email'>
+    <image src='../images/email.png' class='icon-email'></image>
+    <text>发送到我的邮箱</text>
+    <image src='../images/angleRight.png' class='icon-right'></image>
+  </view>
+</view>
+<view class='no-data' style='display:{{title==""?"block":"none"}}'>
+  <image src='../images/noReport.png'></image>
+  <view>暂无数据</view>
+</view>

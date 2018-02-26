@@ -1,0 +1,33 @@
+<!--pages/consult/consult.wxml-->
+<view class='border-top'></view>
+<form bindsubmit="allSubmit">
+  <input name="problemTitle" type='text' class='input' placeholder='问题路径' value="{{clsForm}}"/>
+
+  <radio-group name="problemLevel" class="radio-group exigent" bindchange="exigentChange">
+    <label class="radio {{item.otherValue==exigentRes?'active':''}}" wx:for="{{exigent}}" wx:key="key">
+      <radio value="{{item.otherValue}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+  </radio-group>
+  <view class='dashed'></view>
+  <radio-group name="problemCate" class="radio-group discribe" bindchange="discribeChange">
+    <label class="radio {{item.otherValue==discribeRes?'active':''}}" wx:for="{{discribe}}" wx:key="key">
+      <radio value="{{item.otherValue}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+  </radio-group>
+  <textarea name="problemContent" placeholder='请输入问题详情' value="{{clsForm}}"></textarea>
+  <view class='flex btn-box'>
+    <navigator open-type='navigateBack' hover-class="none" delta="1">取消</navigator>
+    <button class='sub' form-type="submit" >提交</button>
+  </view>
+</form>
+<form class='upload-form' catchsubmit="imgSubmit">
+  <view class='upload'>
+    <view class='imgs' wx:for="{{imgs}}" wx:for-index="index" wx:key="key">
+      <image src='{{ipimg}}{{item}}' class='play-img'></image>
+      <image src='../images/delete.png' data-index='{{index}}' class='del-img' bindtap='deleteImg'></image>
+    </view>
+    <button form-type="submit" class='upload-btn'>
+      <image src='../images/upload.png'></image>
+    </button>
+  </view>
+</form>

@@ -1,0 +1,38 @@
+/**app.wxss**/
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+view,text,input{
+  font-family: PingFangSC-Regular;
+}
+.border-top{
+  border-top: 2rpx solid #ddd;
+}
+.no-list{
+  padding: 300rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+}
+.no-list image{
+  width: 270rpx;
+  height: 228rpx;
+}
+/* 发送邮箱 */
+.send-email{
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  margin: 36rpx 0;
+}
+.icon-email{
+  width: 32rpx;
+  height: 24rpx;
+  margin-right: 20rpx;
+}
+.icon-right{
+  width: 12rpx;
+  height: 20rpx;
+  margin-left: 40rpx;
+}

@@ -1,0 +1,21 @@
+<!--pages/history/history.wxml-->
+<view class='head'>
+  <image src='../images/bg1.png' class="bg"></image>
+  <view>{{name}}</view>
+  <image class='proStatus' src='../images/status{{status}}.png'></image>
+</view>
+<view class='list-box' style='display:{{list.length==0?"none":"block"}}'>
+  <view class='list' wx:for="{{list}}" wx:key="key" wx:for-index="index">
+    <view class='time'>{{item.createTime}}</view>
+    <view class='operation'><text>[{{item.sourceType==1?'项目负责人':'客户'}}-{{item.operator}}]</text> {{item.content}}</view>
+    <image src='../images/history{{index==0?"2":"1"}}.png'></image>
+  </view>
+</view>
+<navigator url='../consult/consult?proId={{proId}}&proName={{name}}' class='consult' hover-class="none">
+  <image src='../images/consult.png'></image>
+</navigator>
+
+<view class='no-list' style='display:{{list.length==0?"block":"none"}}'>
+  <image src='../images/noData.png'></image>
+  <view>暂无数据</view>
+</view>

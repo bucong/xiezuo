@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+  <image class='head-img' src='{{headImg}}'></image>
+  <form bindsubmit="loginForm">
+    <view class='phone flex'>
+      <image src='../images/phone.png'></image>
+      <input type='text' name="phone" bindinput='phoneNum' placeholder="手机号" value='' />
+    </view>
+    <view class='check-num flex'>
+      <image src='../images/checkNum.png'></image>
+      <input name="vCode" placeholder="短信动态码" />
+      <button bindtap='getCheckNum' disabled='{{check=="获取验证码"?"":"disabled"}}'>{{check}}</button>
+    </view>
+    <button class='sub' formType="submit">登录</button>
+  </form>
+</view>

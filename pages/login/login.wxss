@@ -1,0 +1,63 @@
+/* pages/login/login.wxss */
+.login{
+  text-align: center;
+  padding-top: 180rpx;
+}
+.head-img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+form{
+  display: block;
+  width: 566rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  margin-top: 112rpx;
+}
+form image{
+  width: 40rpx;
+  height: 40rpx;
+}
+form .flex{
+  padding: 0 40rpx;
+  height: 84rpx;
+  border: 1rpx solid #E7E7E7;
+  border-radius: 42rpx;
+  margin-bottom: 50rpx;
+}
+form .flex input::-webkit-input-placeholder{
+  color: #ccc;
+}
+form .phone input{
+  width: 300rpx;
+  margin-right: 100rpx;
+}
+.check-num input{
+  width: 200rpx;
+  text-align: left;
+  font-size: 28rpx;
+}
+form .check-num button{
+  display: block;
+  font-size: 28rpx;
+  color: #3370FF;
+  width: 160rpx;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+form .check-num button::after{
+  border: none;
+}
+form .sub{
+  margin-top: 130rpx;
+  width: 302rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #3370FF;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  box-shadow: 0 16rpx 20rpx rgba(100,146,255,0.3);
+}

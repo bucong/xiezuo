@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<swiper bindchange='changePro' current='{{currentPage}}' style='display:{{list.length==0?"none":"block"}}'>
+  <block wx:for="{{list}}" wx:key="key">
+    <swiper-item>
+      <view class='head'>
+        <image src='../images/bg{{item.statusVal}}.png' class="bg"></image>
+        <view>{{item.name}}</view>
+        <image class='proStatus' src='../images/status{{item.statusVal}}.png'></image>
+      </view>
+      <view class='nav-icon-box'>
+        <navigator url='../function/function?proId={{item.id}}&confirm={{item.proSignInfo.funIsConfirm?"1":""}}' class='nav-icon' hover-class="none">
+          <image src='../images/index1{{item.proSignInfo.funIsConfirm?"1":""}}.png'></image>
+          <text>功能列表</text>
+          <view class='no-read'></view>
+        </navigator>
+        <navigator url='../designList/designList?proId={{item.id}}&proName={{item.name}}&proStatus={{item.statusVal}}&confirm={{item.proSignInfo.designIsAllConfirm?"1":"0"}}' class='nav-icon' hover-class="none">
+          <image src='../images/index2{{item.proSignInfo.designIsAllConfirm?"1":""}}.png'></image>
+          <text>设计</text>
+          <view class='no-read'></view>
+        </navigator>
+        <navigator url='../process/process?proId={{item.id}}&proName={{item.name}}&proStatus={{item.statusVal}}' class='nav-icon' hover-class="none">
+          <image src='../images/index3.png'></image>
+          <text>进度报告</text>
+          <view class='no-read'></view>
+        </navigator>
+        <navigator url='../checkAccept/checkAccept?proId={{item.id}}&confirm={{item.proSignInfo.funIsAllCheck?"yes":"no"}}&evaluate={{item.evaluation==null?"no":"yes"}}&name={{item.name}}' class='nav-icon' hover-class="none">
+          <image src='../images/index4{{item.proSignInfo.funIsAllCheck?"1":""}}.png'></image>
+          <text>验收确认</text>
+          <view class='no-read'></view>
+        </navigator>
+        <navigator url='../feedback/feedback?proId={{item.id}}&proName={{item.name}}' class='nav-icon' hover-class="none">
+          <image src='../images/index5.png'></image>
+          <text>问题反馈</text>
+          <view class='no-read'></view>
+        </navigator>
+        <navigator url='../history/history?proId={{item.id}}&proName={{item.name}}&proStatus={{item.statusVal}}' class='nav-icon' hover-class="none">
+          <image src='../images/index6.png'></image>
+          <text>项目历程</text>
+          <view class='no-read'></view>
+        </navigator>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+<loading hidden="{{waiting}}">
+        加载中...
+</loading>
+<view class='no-data' style='display:{{list.length==0?"block":"none"}}'>
+  <image src='../images/noData.png'></image>
+  <view>{{msg}}</view>
+</view>
+<view class='go-people'>
+  <navigator url='../people/people' class='people' hover-class="none">个人中心</navigator>
+  <navigator url='../consult/consult?proId={{nowId}}&proName={{list[currentPage].name}}' class='consult' hover-class="none" style='display:{{list.length==0?"none":"block"}}'>
+    <image src='../images/consult.png'></image>
+  </navigator>
+</view>
+<view class='info'>左右滑动切换项目</view>

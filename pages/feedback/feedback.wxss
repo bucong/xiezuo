@@ -1,0 +1,55 @@
+/* pages/feedback/feedback.wxss */
+.list{
+  margin-left: 30rpx;
+  border-bottom: 2rpx solid #e6e6e6;
+  font-size: 24rpx;
+  padding: 30rpx 30rpx 30rpx 0;
+  line-height: 44rpx;
+  color: #4D4D4D;
+}
+.exigent{
+  width: 28rpx;
+  height: 28rpx;
+}
+.title view{
+  width: 440rpx;
+  height: 44rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.title text{
+  display: block;
+  width: 200rpx;
+  text-align: right;
+}
+.content{
+  color: #999;
+  align-items: flex-start;
+  margin: 10rpx 0;
+}
+.content .question{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.content text{
+  display: block;
+  width: 140rpx;
+  text-align: right;
+}
+.no-read{
+  width: 16rpx;
+  height: 16rpx;
+  background: #3370FF;
+  border-radius: 50%;
+  margin: 14rpx 6rpx;
+}
+.status{
+  text-align: right;
+  color: #000;
+}
+.status text{
+  color: #3370FF;
+}

@@ -1,0 +1,28 @@
+<!--pages/design/design.wxml-->
+<view>
+  <view class='title flex'>
+    <view>{{name}}</view>
+    <text>{{imgs.length}}</text>
+  </view>
+  <view class='imgs'>
+    <view wx:for="{{imgs}}" wx:for-index="index" wx:key="key">
+      <image src='{{ipimg}}{{address}}/{{item}}' mode='aspectFill' data-index="{{index}}" bindtap='showImg'></image>
+    </view>
+  </view>
+</view>
+<view style='display:{{confirm==0?"block":"none"}}'>
+  <button class='sub' bindtap='designSub'>设计确认</button>
+</view>
+<view class='send-email' bindtap='send_zip_file_email'>
+  <image src='../images/email.png' class='icon-email'></image>
+  <text>发送到我的邮箱</text>
+  <image src='../images/angleRight.png' class='icon-right'></image>
+</view>
+<view class='meng' style='display:{{playImg}}'></view>
+<swiper current="{{currentIndex}}" class='big-img' style='display:{{playImg}}' bindtap='hideImg'>
+  <block wx:for="{{imgs}}" wx:key="key">
+    <swiper-item class="swiper-i">
+      <image src="{{ipimg}}{{address}}/{{item}}" mode='widthFix'/>
+    </swiper-item>
+  </block>
+</swiper>

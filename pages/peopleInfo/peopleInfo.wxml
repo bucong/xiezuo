@@ -1,0 +1,18 @@
+<!--pages/peopleInfo/peopleInfo.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='list'>
+    <view class='flex'>
+      <text>用户名</text>
+      <input type='text' name="name" placeholder='请输入' value='{{name}}' />
+    </view>
+    <view class='flex'>
+      <text>手机号</text>
+      <input type='number' placeholder='请输入' disabled='true' value='{{mobile}}' />
+    </view>
+    <view class='flex'>
+      <text>邮箱</text>
+      <input type="text" name="email" placeholder='请输入' value='{{email}}' />
+    </view>
+  </view>
+  <button form-type='submit'>保存</button>
+</form>

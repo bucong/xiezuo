@@ -1,0 +1,29 @@
+<!--pages/designList/designList.wxml-->
+<view class='head'>
+  <image src='../images/bg1.png' class="bg"></image>
+  <view>{{name}}</view>
+  <image class='proStatus' src='../images/status{{status}}.png'></image>
+</view>
+<view class='list-box'>
+  <view class='title'>设计图 DESIGN</view>
+  <navigator url='../design/design?id={{item.id}}&confirm={{confirm}}&name={{item.name}}' class='list flex' hover-class="none" wx:for="{{list[1]}}" wx:key="key">
+    <view class='name'>{{item.name}}</view>
+    <image class='angle' src='../images/angleRight.png'></image>
+  </navigator>
+</view>
+<view class='list-box'>
+  <view class='title'>原型链接 MODEL</view>
+   <view data-url='{{item.value}}' bindtap='copyUrl' class='list flex' wx:for="{{list[2]}}" wx:key="key"> 
+    <view class='name'>{{item.name}}</view>
+    <image class='angle' src='../images/angleRight.png'></image>
+  </view>
+</view>
+<view class='meng' style='display:{{meng}}'>
+  <view class='meng-box'>
+    <image src='../images/close.png' class='close' bindtap='close'></image>
+    <view class='meng-tit'>微信端原型图</view>
+    <image src='../images/pro.png' class='meng-icon'></image>
+    <view class='meng-info'>此原型图需要在浏览器上查看，请点击下方按钮复制链接在浏览器上打开查看</view>
+    <button bindtap='copy'>点击，复制链接到粘贴板上</button>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+/* pages/billing/billing.wxss */
+.flex{
+  align-items: flex-start;
+}
+.list{
+  padding: 0 30rpx;
+  margin-bottom: 350rpx;
+}
+.list view{
+  border-bottom: 2rpx solid #F2F2F2;
+  height: 100rpx;
+}
+.list text{
+  display: block;
+  width: 200rpx;
+  font-size: 28rpx;
+  text-indent: 16rpx;
+  line-height: 100rpx;
+}
+.list input{
+  width: 480rpx;
+  font-size: 28rpx;
+  color: #3370FF;
+  height: 100rpx;
+}
+.list .address{
+  height: 160rpx;
+}
+.list textarea{
+  width: 480rpx;
+  height: 88rpx;
+  line-height: 44rpx;
+  font-size: 28rpx;
+  color: #3370FF;
+  margin-top: 36rpx;
+}
+button{
+  width: 300rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #3370FF;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  box-shadow: 0 16rpx 20rpx rgba(100,146,255,0.3);
+}
+.info{
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}

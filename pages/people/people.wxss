@@ -1,0 +1,71 @@
+/* pages/people/people.wxss */
+page{
+  background: #f5f7f9;
+}
+.people-head{
+  text-align: center;
+  padding-top: 74rpx;
+  background-size: 750rpx 196rpx;
+  background-repeat: no-repeat;
+}
+.people-head image{
+  width: 180rpx;
+  height: 180rpx;
+   border: 12rpx solid #fff; 
+  border-radius: 50%;
+}
+.people-head text{
+  display: block;
+  font-size: 32rpx;
+  margin-top: 16rpx;
+}
+.nav{
+  margin: 76rpx 130rpx;
+}
+.nav navigator{
+  text-align: center;
+}
+.nav image{
+  width: 120rpx;
+  height: 100rpx;
+}
+.nav text{
+  display: block;
+  margin-top: 24rpx;
+  color: #3370FF;
+  font-size: 28rpx;
+}
+.segmenting{
+  width: 4rpx;
+  height: 160rpx;
+  background: #EFEFEF;
+}
+.list{
+  margin: 30rpx 45rpx;
+}
+.list .nav-pro{
+  background: #fff;
+  height: 100rpx;
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+}
+.list image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.list text{
+  font-size: 26rpx;
+  color: #4D4D4D;
+}
+.no-data{
+  text-align: center;
+  margin: 180rpx 0 60rpx 0;
+}
+.no-data image{
+  width: 300rpx;
+  height: 238rpx;
+}
+.no-data view{
+  color: #C3C9D2;
+  font-size: 32rpx;
+}

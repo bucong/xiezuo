@@ -1,0 +1,27 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class='name flex'>
+  <view></view>
+  <text>{{name}}</text>
+  <view></view>
+</view>
+<view class='star-box'>
+  <image src='../images/star{{star}}.png'></image>
+  <view class='star flex'>
+    <view data-star='1' bindtap='star'></view>
+    <view data-star='2' bindtap='star'></view>
+    <view data-star='3' bindtap='star'></view>
+    <view data-star='4' bindtap='star'></view>
+    <view data-star='5' bindtap='star'></view>
+  </view>
+</view>
+<view class='star-content'>{{starContent}}</view>
+<view>
+  <view class='tag-tit'>请选择标签</view>
+  <checkbox-group class="tag" bindchange="tagChange">
+    <label class="checkbox {{item.check}}" wx:for="{{tag}}" wx:key="key">
+      <checkbox value="{{item.value}}" />{{item.name}}
+    </label>
+  </checkbox-group>
+</view>
+<textarea placeholder='亲，请留下您宝贵的意见，谢谢~' bindinput='evaluateContent'></textarea>
+<view><button class='sub' bindtap='evaluate'>提交评价</button></view>

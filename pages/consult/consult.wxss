@@ -1,0 +1,123 @@
+/* pages/consult/consult.wxss */
+page{
+  background: #f5f7f9;
+}
+form{
+  display: block;
+  margin: 30rpx;
+}
+.input{
+  height: 80rpx;
+  background: #fff;
+  color: #3370FF;
+  border: 2rpx solid #3370FF;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+  margin-bottom: 40rpx;
+}
+.radio-group radio{
+   display: none; 
+}
+form .exigent .active{
+  border: 2rpx solid #FF6161;
+  color: #FF6161;
+}
+form .discribe .active{
+  border: 2rpx solid #3370FF;
+  color: #3370FF;
+}
+.radio-group .radio{
+  font-size: 26rpx;
+  display: inline-block;
+  line-height: 52rpx;
+  padding: 0 30rpx;
+  border-radius: 30rpx;
+  background: #fff;
+  margin-right: 20rpx;
+  border: 2rpx solid #e6e6e6;
+  color: #B3B3B3;
+}
+.dashed{
+  margin: 20rpx 0;
+  border-top: 2rpx dashed #CCCCCC;
+}
+textarea{
+  margin-top: 60rpx;
+  background: #fff;
+  width: 650rpx;
+  height: 220rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  padding: 20rpx;
+  border: 2rpx solid #eee;
+  border-radius: 8rpx;
+}
+textarea::-webkit-input-placeholder{
+  color: #e6e6e6;
+}
+.btn-box{
+  width: 560rpx;
+  margin: 380rpx auto 60rpx auto;
+}
+.btn-box button,.btn-box navigator{
+  width: 240rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  border: 2rpx solid #3370FF;
+  color: #3370FF;
+}
+.btn-box .sub{
+  color: #fff;
+  background: #3370FF;
+  box-shadow: 0 16rpx 20rpx rgba(100,146,255,0.3);
+}
+.upload-form{
+  position: absolute;
+  top: 600rpx;
+}
+.upload{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30rpx;
+}
+.upload .imgs{
+  width: 120rpx;
+  height: 120rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 8rpx;
+  margin-right: 22rpx;
+  position: relative;
+}
+.upload .imgs .del-img{
+  position: absolute;
+  top: -16rpx;
+  right: -10rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.upload .upload-btn{
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2rpx dashed #ccc;
+  border-radius: 8rpx;
+  margin: 0;
+}
+button::after{
+  border: none;
+}
+.upload .upload-btn image{
+  width: 50rpx;
+  height: 44rpx;
+}
+.upload .play-img{
+  width: 120rpx;
+  height: 120rpx;
+}
